@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker</title>
+    
+    <style>
+        body{
+            background-image: url("https://imgs.search.brave.com/pkUaB5LxS0pYaJuI6Y1Tj0nIcf1rH4v1NH27C1IXyUA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wdWIt/c3RhdGljLmZvdG9y/LmNvbS9hc3NldHMv/YmcvZWU1ZDkzNmQt/NjQ3Ni00ZmY3LTk2/M2QtOTEzYzcxMzI5/M2MxLmpwZw");
+            background-size: cover;
+        }
+        .header{
+            background-color: palevioletred;
+            width: auto;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            font-family: sans-serif,"Poppins";
+            color: whitesmoke;
+        }
+        .trackDetail{
+            background-color: #ffeef5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 15vw;
+            flex-wrap: wrap;
+            padding: 30px 40px;
+            border-radius: 15px;
+            margin: 60px auto;
+            width: 45vw;
+            justify-content: center;
+        }
+        .trackDetail h2{
+            color: palevioletred;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .trackDetail input{
+            padding: 5px 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: 0.3s;
+        }
+        .trackDetail input:focus {
+            border-color: #ff6f91;
+            box-shadow: 0 0 5px rgba(255, 111, 145, 0.5);
+        }
+        .trackDetail button{
+            padding: 10px;
+            color: white;
+            background-color: #ff6f91;
+            border-color: #ff6f91;
+            border-radius: 15px;
+            margin: 10px 80px;            
+        }
+        .resultCard{
+        margin-top:30px;
+        padding:20px;
+        border-radius:12px;
+        background:#fff5f7;
+        box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        max-width:400px;
+        }
+
+        .resultCard h3{
+            color:#ff6f91;
+            margin-bottom:10px;
+        }
+
+        #predictionResult{
+            font-weight:500;
+            line-height:1.6;
+        }
+        .historyCard{
+        margin-top:30px;
+        padding:20px;
+        border-radius:12px;
+        background:#fdf2f6;
+        box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        max-width:400px;
+        }
+
+        .historyCard h3{
+            color:#ff6f91;
+            margin-bottom:10px;
+        }
+
+        #cycleHistory li{
+            padding:6px 0;
+        }
+    </style>
+</head>
+<body>
+    <script src="js/tracker.js" defer></script>
+    <div class = "header">
+        <h1>MENSTRUAL TRACKER</h1>
+    </div>
+    <div class = "trackDetail">
+        <form>
+            <h2>ENTER YOUR DETAILS</h2>
+            <p>Period Start Date <input type="date" required></p>
+            <p>How long it lasts? <input type="number" placeholder="eg. 3,5 etc" required></p>
+            <p>Period cycle length <input type="number" placeholder="eg. 28,30 etc" required></p>
+            <button>TRACK NOW</button>
+
+        </form>
+        <div class="resultCard">
+        <h3>Your Cycle Prediction</h3>
+        <div id="predictionResult"></div>
+        </div>
+
+        <div class="historyCard">
+        <h3>Your Cycle History</h3>
+        <ul id="cycleHistory"></ul>
+        </div>
+        
+    </div>
+    
+
+
+    
+</body>
+</html>

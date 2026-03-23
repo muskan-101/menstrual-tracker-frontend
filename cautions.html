@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS-PCOD-Cautions</title>
+    <style>
+        body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #fff5f8;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        }
+        .header{
+            background-color: palevioletred;
+            color: #fff5f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 10px;
+            border: 2px;
+        }
+        section {
+        width: 80%;
+        margin: 30px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2, h3 {
+        color: #e91e63;
+        }
+
+        ul {
+        line-height: 1.8;
+        }
+
+        button {
+        background-color: #e91e63;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        }
+
+        button:hover {
+        background-color: #c2185b;
+        }
+
+        footer {
+        text-align: center;
+        padding: 10px;
+        background: #e91e63;
+        color: white;
+        margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "header">
+        <h1>Health Precautions For PCOS/PCOD</h1>
+    </div>
+      <section class="intro">
+    <h2>PCOS & PCOD Awareness</h2>
+    <p>Polycystic Ovary Syndrome (PCOS) and Polycystic Ovarian Disease (PCOD) are common hormonal conditions among women. Knowing the signs early can help in maintaining good reproductive and overall health.</p>
+  </section>
+
+  <section class="symptoms">
+    <h3>⚠️ Common Symptoms</h3>
+    <ul>
+      <li>Irregular periods or skipped cycles</li>
+      <li>Acne or oily skin</li>
+      <li>Weight gain or difficulty losing weight</li>
+      <li>Excessive hair growth (face, chest, back)</li>
+      <li>Thinning scalp hair</li>
+      <li>Mood swings or fatigue</li>
+    </ul>
+  </section>
+
+  <section class="tips">
+    <h3>💡 Health Tips & Cautions</h3>
+    <p>While PCOS/PCOD cannot be cured completely, lifestyle management helps a lot. Here’s what you can do:</p>
+    <ul>
+      <li>Maintain a balanced diet rich in fiber and low in sugar</li>
+      <li>Exercise at least 30 minutes a day</li>
+      <li>Sleep 7–8 hours daily and manage stress</li>
+      <li>Avoid skipping meals or crash dieting</li>
+      <li>Consult a gynecologist if your cycles are irregular for more than 3 months</li>
+    </ul>
+  </section>
+  <section class="quiz">
+    <h3>🩺 Quick Self-Check Quiz</h3>
+    <p>Select the symptoms you’ve noticed recently:</p>
+    
+    <form id="pcosForm">
+      <label><input type="checkbox" name="symptom" value="1"> Irregular or missed periods</label><br>
+      <label><input type="checkbox" name="symptom" value="1"> Sudden weight gain</label><br>
+      <label><input type="checkbox" name="symptom" value="1"> Acne or oily skin</label><br>
+      <label><input type="checkbox" name="symptom" value="1"> Excess facial/body hair</label><br>
+      <label><input type="checkbox" name="symptom" value="1"> Hair thinning on scalp</label><br>
+      <label><input type="checkbox" name="symptom" value="1"> Fatigue or mood swings</label><br><br>
+
+      <button type="button" onclick="checkPCOS()">Check Result</button>
+    </form>
+
+    <p id="result"></p>
+  </section>
+
+  <section class="contact">
+    <h3>🩺 Remember</h3>
+    <p>Your cycle is your body’s natural signal — keep track of it and seek help early if something feels off. Small steps lead to better health. 🌼</p>
+  </section>
+  
+
+  <footer>
+    <p>© 2025 Menstrual Tracker | Built with ❤️ by Muskan Thakur</p>
+  </footer>
+  <script>
+    function checkPCOS() {
+    const checkboxes = document.querySelectorAll('input[name="symptom"]:checked');
+    const result = document.getElementById('result');
+    const count = checkboxes.length;
+
+    if (count === 0) {
+        result.textContent = "Please select at least one symptom to proceed.";
+        result.style.color = "#999";
+        return;
+    }
+
+    if (count <= 2) {
+        result.textContent = "Your symptoms seem mild. Stay healthy and keep tracking your cycle regularly! 🌷";
+        result.style.color = "#4CAF50";
+    } else if (count <= 4) {
+        result.textContent = "Some symptoms detected. It may be a good idea to consult a doctor or monitor your health closely. 💬";
+        result.style.color = "#FF9800";
+    } else {
+        result.textContent = "You may be showing signs of PCOS/PCOD. Please consult a gynecologist for proper diagnosis. ❤️";
+        result.style.color = "#e91e63";
+    }
+    }
+  </script>
+</body>
+</html>

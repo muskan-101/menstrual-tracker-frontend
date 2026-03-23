@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/casStyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menstrual-Tracker</title>
+  <script src="js/chatbot.js" defer></script>
+  <script src="js/tracker.js" defer></script>
+</head>
+
+<body>
+  <!-- 🌸 Chatbot Icon -->
+  <div id="chat-icon"><span>💬</span></div>
+
+  <!-- 🌸 Chatbot Box -->
+  <div id="chatbox" class="hidden">
+    <div id="chat-header">
+      <span>Bloom Assistant 🌸</span>
+      <span style="cursor:pointer" onclick="toggleChat()">✕</span>
+    </div>
+    <div id="chat-messages"></div>
+    <div id="typing-indicator" class="typing-indicator" style="display:none;">
+      <span></span><span></span><span></span>
+    </div>
+    <div id="chat-button-container"></div>
+    <div id="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Type your answer..." onkeypress="handleKeyPress(event)" />
+      <button onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+  <div class="navbar">
+    <img
+      src="https://imgs.search.brave.com/QHTbwa6aShdWTkwYhPaVDEiSBZjTyB9GJJlioNgD6JU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/bWVuc3RydWFsLWNh/bGVuZGFyLWNvbmNl/cHQtaWxsdXN0cmF0/aW9uXzUyNjgzLTQ1/NTYxLmpwZz9zZW10/PWFpc19oeWJyaWQm/dz03NDAmcT04MA">
+    <a href=#home>HOME</a>
+    <div class="dropdown">
+      <button class="dropbtn">Services ▼</button>
+      <div class="dropdown-content">
+        <a href="tracker.html">Menstrual Tracker</a>
+        <a href="cautions.html">PCOS/PCOD Caution</a>
+        <a href="https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=1021&lid=391">Health Tips (by Gov of India)</a>
+      </div>
+    </div>
+    <a href="articles.html">ARTICLES</a>
+    <a href=#CONTACT>CONTACT US</a>
+    <a href=#login>LOGIN</a>
+  </div>
+  <div class="page-heading">
+    <h1>BLOOM IN EVERY CYCLE 🌷</h1>
+  </div>
+  <div id="home" class="HOME">
+    <div class="content">
+      <h2>ABOUT</h2>
+      <p>
+        The Menstrual Tracker helps you predict and manage your cycle with ease.
+        Enter your last period date and average cycle length to get accurate
+        predictions, along with cautions for PCOS and PCOD.
+      </p>
+      <a href=#login>
+        <button type="button">REGISTER NOW</button>
+      </a>
+    </div>
+
+    <div class="image-container">
+      <img
+        src="https://imgs.search.brave.com/xp1tZAHIC7agvOQz8UkSF93_fgWdsm43JzAUpEyH1LM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/a290ZXguY29tLnBo/Ly0vbWVkaWEvZmVh/dHVyZS9rb3RleC9h/cGFjL2NvbW1vbi9n/bG9iYWxwZXJpb2Rj/YWxjdWxhdG9yL3Bv/cHVwLmpwZWc_cmV2/PS0x"
+        alt="mainImage" />
+    </div>
+  </div>
+
+  <div id="login" class=registration>
+    <div class="register">
+      <h2>REGISTER HERE</h2>
+      <form>
+        <p>Name <input type="text" placeholder="Enter Your Name" required></p>
+
+        <p>Date Of Birth <input type="date" required></p>
+
+        <p>Gmail <input type="email" placeholder="Enter your mail" required></p>
+
+        <p>Username <input type="text" placeholder="Enter your username" required></p>
+
+        <p>New Password <input type="password" placeholder="Enter new password" required></p>
+
+        <p>Confirm Password <input type="password" placeholder="Re-enter password" required> </p>
+        <button>SUBMIT</button>
+      </form>
+      <p>Already Registered? <a href=>Login here</a></p>
+    </div>
+    <div class="login">
+      <h2>LOGIN PORTAL</h2>
+      <form>
+        <p>Username <input type="text" placeholder="Enter your username" required></p>
+        <p>Password <input type="password" placeholder="Enter new password" required></p>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+  <div id="CONTACT" class="contactsection">
+    <h2>CONTACT ME</h2>
+    <p class="contact-text">Let’s connect! You can reach me through my social profiles or send me a direct message
+      below.</p>
+
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/muskan-thakur-6a552a328/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"> LinkedIn
+      </a>
+      <a href="https://github.com/muskan-101" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub"> GitHub
+      </a>
+      <a href="mailto:muskan.thakur24@pccoepune.org">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"> Email
+      </a>
+    </div>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    <p>© 2025 Muskan Thakur</p>
+    <p>
+      <a href="https://www.linkedin.com/in/muskan-thakur-6a552a328/" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/muskan-101" target="_blank">GitHub</a> |
+      <a href="mailto:muskan.thakur24@pccoepune.org">Email</a>
+    </p>
+  </div>
+</body>
+
+</html>
